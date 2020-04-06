@@ -1,0 +1,32 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.content-container {
+  overflow: auto;
+}
+
+.active-link {
+  span {
+    color: #ff4081;
+  }
+  mat-icon {
+    color: #ff4081;
+  }
+}
+
+.border-radius-10 {
+  border-radius: 10px;
+}
+
+::ng-deep .mat-ripple {
+  border-radius: 10px;
+}
+
+::ng-deep .mat-list-item:focus {
+  background: none !important;
+}
+
+::ng-deep .mat-list-item:hover {
+background: rgba(255,255,255,.04) !important;;
+}
