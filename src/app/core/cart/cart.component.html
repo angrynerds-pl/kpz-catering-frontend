@@ -1,0 +1,11 @@
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let product of dishes">
+  <span>{{ product.name }} </span>
+  <span>{{ product.price  }} zł</span>
+  <button (click)="removeProduct(product)">Usuń</button>
+</div>
+<p>Suma: {{sum}} zł</p>
+<div *ngIf="sum != 0">
+  <button>Zamawiam</button>
+</div>

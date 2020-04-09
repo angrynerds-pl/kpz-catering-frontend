@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './core/components/dashboard/dashboard.component';
+import { DishesListComponent } from './core/dishes-list/dishes-list.component';
+import { CartComponent } from './core/cart/cart.component';
+
 
 const appRoutes: Routes = [
   {
     path: 'users',
     loadChildren: () => import('./user/user.module').then(m => m.UserModule)
   },
-  {
-    path: 'dashboard',
-    component: DashboardComponent
-  }
+  { path: '', component: DishesListComponent },
+  { path: 'cart', component: CartComponent },
 ];
 
 @NgModule({

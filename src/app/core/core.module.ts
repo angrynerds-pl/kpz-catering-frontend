@@ -11,13 +11,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { DishesListComponent } from './dishes-list/dishes-list.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
-    SidenavComponent,
-    DashboardComponent
+    TopBarComponent,
+    DishesListComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,
@@ -44,10 +46,10 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatMenuModule,
     MatListModule,
     MatToolbarModule,
-    SidenavComponent,
     MatIconModule,
-    MatButtonModule,
-    DashboardComponent
+    MatButtonModule, 
+    TopBarComponent,
+    DishesListComponent
   ]
 })
 export class CoreModule {

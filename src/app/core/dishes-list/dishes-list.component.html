@@ -1,0 +1,10 @@
+<h2>Dania do wyboru:</h2>
+<div *ngFor="let product of dishes">
+    <h3>
+        {{ product.name }}
+       <p> {{ product.price }} zł </p>
+    </h3>
+    <button (click)="addToCart(product)" >
+        Dodaj do zamówienia
+      </button>
+</div>
