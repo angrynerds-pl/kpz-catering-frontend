@@ -7,5 +7,7 @@
 </div>
 <p>Suma: {{sum}} zł</p>
 <div *ngIf="sum != 0">
-  <button>Zamawiam</button>
+  <a routerLink="/order">
+    <button>Zamawiam</button>
+  </a>
 </div>

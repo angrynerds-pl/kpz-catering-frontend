@@ -15,11 +15,14 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { DishesListComponent } from './dishes-list/dishes-list.component';
 import { CartComponent } from './cart/cart.component';
 
+import { OrderFormComponent } from './order-form/order-form.component';
+
 @NgModule({
   declarations: [
     TopBarComponent,
     DishesListComponent,
-    CartComponent
+    CartComponent,
+    OrderFormComponent
   ],
   imports: [
     CommonModule,
