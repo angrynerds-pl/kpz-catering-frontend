@@ -1,13 +1,17 @@
-<h3>Cart</h3>
+<h3>Twój koszyk</h3>
 
-<div class="cart-item" *ngFor="let product of dishes">
-  <span>{{ product.name }} </span>
-  <span>{{ product.price  }} zł</span>
-  <button (click)="removeProduct(product)">Usuń</button>
-</div>
-<p>Suma: {{sum}} zł</p>
-<div *ngIf="sum != 0">
-  <a routerLink="/order">
-    <button>Zamawiam</button>
-  </a>
+<div id="container">
+  <div class="cart-item" *ngFor="let product of dishes">
+    <p id = 'two'>{{ product.name }}
+    {{ product.price  }} zł
+    <button (click)="removeProduct(product)">Usuń</button></p>
+  </div>
+  
+  <div *ngIf="sum != 0">
+    <p id = 'three'>Suma: {{sum}} zł
+      <a routerLink="/order">
+        <button>Zamawiam</button>
+      </a>
+    </p>
+  </div>
 </div>

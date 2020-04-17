@@ -1,0 +1,32 @@
+#container
+{
+  width: 20%;
+	margin-left: auto;
+  margin-right: auto;
+  height: 1000px;
+}
+
+p{
+    display:inline-block;
+    width:100%;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    background:hsla(67, 95%, 95%, 1);
+    text-align: center;
+
+  }
+
+  #two{
+    border: inset 5px hsla(0, 95%, 35%, 1);
+ }
+
+ #three{
+    border:dashed 5px hsla(0, 95%, 35%, 1);
+ }
+
+ h3 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: black;
+}
