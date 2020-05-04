@@ -1,9 +1,9 @@
 <div class="container-fluid">
 
     <h1>Szczegóły zamówienia</h1>
-    <form #userForm="ngForm">
+    <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
         
-        <div class="form-group">
+        <div class="form-group" >
             <label>Imię</label>
             <input  type="text" name="userName" #name="ngModel" required class="form-control" 
             [class.is-invalid]="name.invalid && name.touched"
@@ -58,7 +58,7 @@
             </div>
           </div>
 
-        <button [disabled]="userForm.invalid" class="btn btn-primary">Zatwierdź</button>
+        <button [disabled]="userForm.form.invalid" type="submit" class="btn btn-primary">Zatwierdź</button>
 
     </form>
 

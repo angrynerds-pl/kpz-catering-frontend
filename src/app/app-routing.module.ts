@@ -7,10 +7,6 @@ import { OrderFormComponent } from './core/order-form/order-form.component';
 
 
 const appRoutes: Routes = [
-  {
-    path: 'users',
-    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
-  },
   { path: '', component: DishesListComponent },
   { path: 'cart', component: CartComponent },
   { path: 'order', component: OrderFormComponent}
