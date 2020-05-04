@@ -16,5 +16,12 @@ export const dishes = [
       price: 9,
       description: 'Zupa z pieczarek',
       image: 'assets/img/pieczarkowa.jpeg'
+    },
+    {
+      name: 'Lasagne',
+      price: 20,
+      description: 'Pieczona lasagne',
+      image: 'assets/img/lasagne.jpeg'
     }
+
   ];
