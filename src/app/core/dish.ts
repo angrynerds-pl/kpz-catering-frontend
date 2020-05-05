@@ -5,3 +5,10 @@ export interface Dish
     description: string;
     image: string;
 }
+
+export interface Dish1
+{
+    name: string;
+    description: string;
+    price: number;
+}

@@ -22,4 +22,5 @@ describe('DishesListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+});import { from } from 'rxjs';
+
