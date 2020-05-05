@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {dishes} from '../dishes';
-import {CartService} from '../cart.service';
+import {dishes} from '../../Models/dishes';
+import {CartService} from '../../services/cart.service';
 @Component({
   selector: 'app-dishes-list',
   templateUrl: './dishes-list.component.html',

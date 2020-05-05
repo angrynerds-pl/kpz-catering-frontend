@@ -4,12 +4,13 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class OrderService {
-  url = '';
+export class LoginService {
+  
+  url = 'http://localhost:3000/users';
   constructor(private http: HttpClient) { }
 
-  postOrder(order)
+  login(model)
   {
-    return this.http.post<any>(this.url, order);
+    return this.http.post<any>(this.url, model);
   }
 }

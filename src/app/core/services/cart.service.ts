@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {dishes} from './dishes';
-import {Dish} from './dish';
+import {dishes} from '../Models/dishes';
+import {Dish} from '../Models/dish';
 import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable({

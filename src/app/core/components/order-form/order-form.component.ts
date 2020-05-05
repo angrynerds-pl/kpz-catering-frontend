@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Order } from '../order';
-import { OrderService } from '../order.service';
-import { CartService } from '../cart.service';
-import { OrderDetails } from '../order-details';
+import { ClientInfo } from '../../Models/ClientInfo';
+import { OrderService } from '../../services/order.service';
+import { CartService } from '../../services/cart.service';
+import { OrderDetails } from '../../Models/order-details';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { OrderDetails } from '../order-details';
 })
 export class OrderFormComponent implements OnInit {
 
-  userModel = new Order();
+  userModel = new ClientInfo();
   orderDetails: OrderDetails;
   submitted = false;
   constructor(public orderService: OrderService, public cartService: CartService) { }
