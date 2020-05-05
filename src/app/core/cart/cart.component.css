@@ -7,21 +7,23 @@
 }
 
 p{
-    display:inline-block;
+   display:inline-block;
     width:100%;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     padding:1em;
     background:hsla(67, 95%, 95%, 1);
     text-align: center;
-
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   }
 
   #two{
     border: inset 5px hsla(0, 95%, 35%, 1);
+    
+    
  }
 
  #three{
     border:dashed 5px hsla(0, 95%, 35%, 1);
+    
  }
 
  h3 {

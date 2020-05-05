@@ -1,7 +1,45 @@
 .container
 {
     display:flex;
-    width: auto;
+    width: 60%;
     height: 50px;
-    justify-content: space-between;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  rgba(153, 167, 121, 0.767);
+    /*background-color:
+    justify-content: space-between;*/
+}
+
+.option
+{
+	color: black;
+	min-width: 50px;
+	height: 40px;
+	font-size: 18px;
+	padding: 10px;
+	border-right: 2px dotted #444444;
+    opacity: 0.8;
+}
+
+.option:hover
+{
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.optionLast
+{
+    color: black;
+	min-width: 50px;
+	height: 40px;
+	font-size: 18px;
+	padding: 10px;
+    opacity: 0.8;
+}
+
+.optionLast:hover
+{
+    background-color: wheat;
+    cursor: pointer;
 }

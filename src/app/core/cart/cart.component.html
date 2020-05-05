@@ -1,7 +1,7 @@
 <h3>Twój koszyk</h3>
 
 <div id="container">
-  <div class="cart-item" *ngFor="let product of dishes">
+  <div class="cart-item" *ngFor="let product of dishes" >
     <p id = 'two'>{{ product.name }}
     {{ product.price  }} zł
     <button (click)="removeProduct(product)">Usuń</button></p>
