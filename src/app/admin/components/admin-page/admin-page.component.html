@@ -1,7 +1,7 @@
 <h2>Zamówienia:</h2>
-<div *ngFor="let order of orders">
+<div *ngFor="let order of orders" id="one">
     <h3>
-        Suma: {{order.sum }}  <br>
+        Suma: {{order.sum }} PLN <br>
         Status: {{order.status}} <br>
         Imię klienta: {{order.client.name}} <br>
         Nazwisko klienta: {{order.client.lastName}}
@@ -9,4 +9,4 @@
     <button (click)="confirm(order)" >
         Zatwierdź
       </button>
-</div>
+    </div>
