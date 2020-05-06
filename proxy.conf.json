@@ -1,0 +1,10 @@
+{
+    "/posts": {
+      "target": "https://cateringbackend.azurewebsites.net/dishes",
+      "secure": true,
+      "pathRewrite": {
+      "^/posts": ""
+    },
+      "changeOrigin": true
+    }
+  }
