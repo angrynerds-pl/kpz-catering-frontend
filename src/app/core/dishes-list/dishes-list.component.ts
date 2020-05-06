@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {dishes} from '../dishes';
 import {CartService} from '../cart.service';
+import { HttpClient } from '@angular/common/http';
+
+
 @Component({
   selector: 'app-dishes-list',
   templateUrl: './dishes-list.component.html',
@@ -8,7 +11,21 @@ import {CartService} from '../cart.service';
 })
 export class DishesListComponent implements OnInit {
   dishes = dishes;
-  constructor(private cartService: CartService) { }
+  items = [];
+  json;
+  title = 'todo-app';
+
+  url = 'https://cateringbackend.azurewebsites.net/dishes';
+  constructor(private cartService: CartService, private http: HttpClient) {
+    this.http.get(this.url).toPromise().then(data => {
+      console.log(data);
+      for (let name in data) {
+        if (data.hasOwnProperty(name)) {
+          this.items.push(data[name]);
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
   }
