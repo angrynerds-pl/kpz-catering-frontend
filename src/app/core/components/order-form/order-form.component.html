@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
     <h1>Szczegóły zamówienia</h1>
-    <form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()" >
         
         <div class="form-group" >
             <label>Imię</label>
@@ -58,7 +58,7 @@
             </div>
           </div>
 
-        <button [disabled]="userForm.form.invalid" type="submit" class="btn btn-primary">Zatwierdź</button>
+        <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">Zatwierdź</button>
 
     </form>
 

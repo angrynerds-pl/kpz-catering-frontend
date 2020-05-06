@@ -1,1 +1,12 @@
-<p>admin-page works!</p>
+<h2>Zamówienia:</h2>
+<div *ngFor="let order of orders">
+    <h3>
+        Suma: {{order.sum }}  <br>
+        Status: {{order.status}} <br>
+        Imię klienta: {{order.client.name}} <br>
+        Nazwisko klienta: {{order.client.lastName}}
+    </h3>
+    <button (click)="confirm(order)" >
+        Zatwierdź
+      </button>
+</div>
