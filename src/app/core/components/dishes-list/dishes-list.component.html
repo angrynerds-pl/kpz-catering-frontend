@@ -1,0 +1,16 @@
+<app-top-bar></app-top-bar>
+<div id="container">
+    <h2>Dania do wyboru:</h2>
+    <div class="Row">
+        <div *ngFor="let product of menu; " class="Column">
+            <h4>{{ product.name }}
+            {{ product.price }} zł </h4>
+            <p id="one">  
+                {{product.description}} 
+             <button (click)="addToCart(product)" >
+                Dodaj do zamówienia
+            </button>
+            </p>
+        </div>
+    </div>
+</div>

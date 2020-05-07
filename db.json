@@ -1,54 +1,43 @@
 {
   "users": [
     {
-      "id": 1,
-      "firstname": "Ędward",
-      "lastname": "Ącki"
+      "login": "a",
+      "password": "a",
+      "id": 1
     },
     {
-      "id": 2,
-      "firstname": "Krzysztof",
-      "lastname": "Czwartek"
+      "timePreference": "morning",
+      "dishes": [
+        {
+          "name": "Pomidorowa",
+          "price": 8,
+          "description": "Zupa z pomidórów z makaronem"
+        }
+      ],
+      "sum": 8,
+      "client": {
+        "name": "aa",
+        "lastName": "a",
+        "address": "a",
+        "email": "a",
+        "phone": "123112112"
+      },
+      "id": 2
     },
     {
-      "id": 3,
-      "firstname": "Jan",
-      "lastname": "Nowak"
+      "login": "a",
+      "password": "a",
+      "id": 3
     },
     {
-      "id": 4,
-      "firstname": "Adam",
-      "lastname": "Mały"
+      "login": "a",
+      "password": "a",
+      "id": 4
     },
     {
-      "id": 5,
-      "firstname": "Robert",
-      "lastname": "Prawandowski"
-    },
-    {
-      "id": 6,
-      "firstname": "Kamil",
-      "lastname": "Sztos"
-    },
-    {
-      "id": 7,
-      "firstname": "Krystian",
-      "lastname": "Ronald"
-    },
-    {
-      "id": 8,
-      "firstname": "Pistolet",
-      "lastname": "Długolufy"
-    },
-    {
-      "id": 9,
-      "firstname": "Jacek",
-      "lastname": "Wróbel"
-    },
-    {
-      "id": 10,
-      "firstname": "Karol",
-      "lastname": "Jaśkowiak"
+      "login": "a",
+      "password": "a",
+      "id": 5
     }
   ]
 }

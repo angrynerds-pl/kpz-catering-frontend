@@ -12,10 +12,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
-import { DishesListComponent } from './dishes-list/dishes-list.component';
-import { CartComponent } from './cart/cart.component';
+import { DishesListComponent } from './components/dishes-list/dishes-list.component';
+import { CartComponent } from './components/cart/cart.component';
 
-import { OrderFormComponent } from './order-form/order-form.component';
+import { OrderFormComponent } from './components/order-form/order-form.component';
 
 @NgModule({
   declarations: [

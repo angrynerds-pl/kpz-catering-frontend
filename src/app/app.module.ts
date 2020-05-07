@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
 
+import { AdminModule } from './admin/admin.module';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     CoreModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
