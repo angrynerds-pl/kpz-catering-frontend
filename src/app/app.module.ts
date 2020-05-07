@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
 
 import { AdminModule } from './admin/admin.module';
+import { AuthGuard } from './admin/auth/auth.guard';
 
 
 
@@ -21,7 +22,7 @@ import { AdminModule } from './admin/admin.module';
     HttpClientModule,
     AdminModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {
