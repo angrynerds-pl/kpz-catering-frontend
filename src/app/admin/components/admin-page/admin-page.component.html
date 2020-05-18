@@ -19,6 +19,7 @@
 <h2>Zamówienia:</h2>
 <div *ngFor="let order of orders">
     <h3>
+        Data zamowienia: {{order.orderTime}} <br>
         Suma: {{order.sum }}  <br>
         Status: {{order.status}} <br>
         Imię klienta: {{order.client.name}} <br>
