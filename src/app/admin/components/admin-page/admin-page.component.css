@@ -36,3 +36,13 @@ div{
   #three{
      border:dashed 5px hsla(0, 95%, 35%, 1);
   }
+  #wyloguj:hover
+  {
+    cursor:pointer;
+  }
+  #wyloguj
+  {
+    color:red;
+    font-size: 20px;
+    text-align: center;
+  }
