@@ -174,34 +174,3 @@
     margin: auto;
   }
   
-  /*
-  =====
-  LinkedIn
-  =====
-  */
-  
-  .linkedin{
-    width: 100%;
-    background-color: #f0f0f0;
-    text-align: center;
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .linkedin__container{
-    max-width: 1000px;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;  
-  }
-  
-  .linkedin__text{
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  
-  .linkedin__link{
-    color: #ff5c5c;
-  }
