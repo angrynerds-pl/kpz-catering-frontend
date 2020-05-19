@@ -1,8 +1,12 @@
 <div class="row">
 
-    <div class="col-md-2 offset-md-5 mt-4"  id="one">
 
-        <form  (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="col-md-2 offset-md-5 mt-4">
+      <div *ngIf="error" class="red-text center error-message">
+          <i class="material-icons">error</i>Incorrect username or password
+      </div>
+        <form  (ngSubmit)="onSubmit(login.value,password.value)" #form="ngForm">
+
 
             <div class="form-group">
               <label for="loginUsername">Login</label>

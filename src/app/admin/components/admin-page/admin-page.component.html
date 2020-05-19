@@ -1,8 +1,17 @@
+<div (click)="logout()">
+  Wyloguj
+</div>
+
+
+
 <h2>Zamówienia:</h2>
 <ng-container *ngFor="let order of orders" >
   <div *ngIf="order.status=='Złożone'" id="one">
     <h3>
-        Suma: {{order.sum }} PLN <br>
+
+        Data zamowienia: {{order.orderTime}} <br>
+        Suma: {{order.sum }}  <br>
+
         Status: {{order.status}} <br>
         Imię klienta: {{order.client.name}} <br>
         Nazwisko klienta: {{order.client.lastName}}
