@@ -1,0 +1,15 @@
+#one {
+    padding:1em;
+    margin-right: auto;
+    margin-left: auto;
+    background:hsla(67, 95%, 95%, 1);
+    border:solid 5px hsla(0, 95%, 35%, 1);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    width: 100%;
+}

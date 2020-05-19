@@ -5,10 +5,12 @@
 
 
 <h2>Zamówienia:</h2>
-<div *ngFor="let order of orders">
+<div *ngFor="let order of orders" id="one">
     <h3>
+
         Data zamowienia: {{order.orderTime}} <br>
         Suma: {{order.sum }}  <br>
+
         Status: {{order.status}} <br>
         Imię klienta: {{order.client.name}} <br>
         Nazwisko klienta: {{order.client.lastName}}
@@ -16,4 +18,4 @@
     <button (click)="confirm(order)" >
         Zatwierdź
       </button>
-</div>
+    </div>
