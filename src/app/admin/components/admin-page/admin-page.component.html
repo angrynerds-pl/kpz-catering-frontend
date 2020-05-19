@@ -2,19 +2,7 @@
   Wyloguj
 </div>
 
-<div class="row" *ngIf="userClaims">
-  <div class="col s12 m7">
-    <div class="card">
-      <div class="card-content">
-        <span>Username: {{userClaims.UserName}}</span>
-        <br>
-        <span>Username: {{userClaims.LastName}}</span>
-        <br>
-      </div>
-    </div>
 
-  </div>
-</div>
 
 <h2>Zamówienia:</h2>
 <div *ngFor="let order of orders">

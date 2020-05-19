@@ -4,24 +4,26 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import {FullOrderDetails} from '../../model/fullOrderDetails';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
+import { User } from 'src/app/admin/model/User';
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
   styleUrls: ['./admin-page.component.css']
 })
 export class AdminPageComponent implements OnInit {
-  userClaims: any;
+  currentUser: User;
   orders: Array<FullOrderDetails> ;
-  constructor(private orderService: OrderService, private router: Router, private loginService: LoginService) { }
+  constructor(private orderService: OrderService, private router: Router, private authenticationService: LoginService) 
+  {
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+  }
 
   ngOnInit(): void {
     this.getOrders();
     this.orderService.createConnection();
     this.orderService.register();
     this.orderService.startConnection();
-    this.loginService.getUserClaims().subscribe((data: any) => {
-      this.userClaims = data;  
-    });
+    
   }
 
   getOrders()
@@ -36,9 +38,8 @@ export class AdminPageComponent implements OnInit {
     order.status = 'zatwierdzono';
     this.orderService.sendOrders();
   }
-  logout()
-  {
-    localStorage.removeItem('userToken');
+  logout() {
+    this.authenticationService.logout();
     this.router.navigate(['/admin']);
-  }
+}
 }

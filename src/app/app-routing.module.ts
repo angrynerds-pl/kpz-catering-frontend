@@ -14,7 +14,7 @@ const appRoutes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'order', component: OrderFormComponent},
   { path: 'admin', component: LoginComponent},
-  { path: 'admin/page', component: AdminPageComponent}
+  { path: 'admin/page', component: AdminPageComponent, canActivate: [AuthGuard]}
 
 ];
 
