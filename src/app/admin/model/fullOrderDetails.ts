@@ -6,7 +6,7 @@ export class FullOrderDetails {
     public order: ClientInfo;
     public dishes: Dish[];
     public sum: number;
-    public orderTime: string;
+    public orderTime: Date;
     public timePreference: string;
     public status: string;
     public periodicity: boolean;
