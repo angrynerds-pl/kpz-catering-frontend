@@ -1,4 +1,4 @@
-import { ClientInfo } from 'src/app/core/Models/ClientInfo';
+import { ClientInfo } from 'src/app/admin/model/ClientInfo';
 import {Dish} from 'src/app/core/Models/dish';
 
 export class FullOrderDetails {

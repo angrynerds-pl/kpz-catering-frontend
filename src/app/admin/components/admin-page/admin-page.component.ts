@@ -20,23 +20,24 @@ export class AdminPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getOrders();
-    this.orderService.createConnection();
-    this.orderService.register();
-    this.orderService.startConnection();
-    
+    this.getNewOrders();
   }
 
   getOrders()
   {
-    //this.orderService.getOrders().subscribe(orders => this.orders =  orders);
-    this.orderService.getOrders2().subscribe(orders => this.orders =  orders);
+    this.orderService.getOrders().subscribe(orders => this.orders =  orders);
+    this.orders.sort((a, b) => new Date(b.orderTime).getTime() - new Date(a.orderTime).getTime());
+  }
+  getNewOrders()
+  {
+    this.orderService.singalRecived.subscribe(signal => this.orders.push(signal));
     this.orders.sort((a, b) => new Date(b.orderTime).getTime() - new Date(a.orderTime).getTime());
   }
 
   confirm(order)
   {
     order.status = 'zatwierdzono';
-    this.orderService.sendOrders();
+    this.orderService.sendOrders(order);
   }
   logout() {
     this.authenticationService.logout();
