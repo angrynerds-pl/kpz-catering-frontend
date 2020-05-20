@@ -42,7 +42,11 @@ div{
   }
   #wyloguj
   {
+    margin-top: 20px;
+    margin-bottom: 20px;
     color:red;
     font-size: 20px;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    border: solid 4px black;
   }

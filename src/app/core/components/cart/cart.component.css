@@ -1,6 +1,6 @@
 #container
 {
-  width: 60%;
+  width: 74.2%;
 	margin-left: auto;
   margin-right: auto;
   background-color: cadetblue;
@@ -16,6 +16,9 @@ p{
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   #two{
@@ -35,4 +38,32 @@ p{
   letter-spacing: 3px;
   color: black;
   margin-bottom: 20px;
+  padding-top: 10px;
+  font-family: 'Chelsea Market', cursive;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:13px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family: 'Roboto Mono', monospace;
+	font-size:12px;
+	font-weight:bold;
+	padding:8px 16px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  align-self: auto;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }

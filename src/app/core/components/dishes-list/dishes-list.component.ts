@@ -16,6 +16,7 @@ export class DishesListComponent implements OnInit {
   json;*/
   title = 'todo-app';
   menu = [];
+  rows = [];
   url = 'https://cateringbackend.azurewebsites.net/dishes';
   constructor(private cartService: CartService, private dishesListService: DishesListService) {
   }
@@ -26,5 +27,15 @@ export class DishesListComponent implements OnInit {
   addToCart(product) {
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!');
+  }
+
+  fillRowTable(): void {
+    for(let i = 1; i < this.returnSize(); i++) {
+      this.rows.push(i);
+    }
+  }
+
+  returnSize(): number {
+    return this.menu.length;
   }
 }

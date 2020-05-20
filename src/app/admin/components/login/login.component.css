@@ -13,3 +13,9 @@
 button {
     width: 100%;
 }
+
+div {
+    font-family: 'Arapey', serif;
+    font-weight: bold;
+    font-size: 16px;
+}
