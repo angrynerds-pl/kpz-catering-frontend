@@ -1,11 +1,5 @@
 div{
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    padding:1em;
-    margin-right: auto;
-    margin-left: auto;
-    width: 30%;
-    background:hsla(67, 95%, 95%, 1);
-    margin-bottom: 10px;
+    
   }
 
   button{
@@ -49,4 +43,15 @@ div{
     text-align: center;
     font-family: 'Press Start 2P', cursive;
     border: solid 4px black;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding:1em;
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+    background:hsla(67, 95%, 95%, 1);
+    margin-bottom: 10px;
+  }
+
+  .container {
+    display: flex;
   }
