@@ -1,6 +1,6 @@
 .container-fluid {
     background-color: cadetblue;
-    width: 60%;
+    width: 74.2%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -8,8 +8,37 @@
 h1 {
     text-align: center;
     padding-top: 10px;
+    font-family: 'Chelsea Market', cursive;
 }
 
 label {
     font-size: 20px;
+}
+
+input {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+}
+
+label{
+    margin-left: 15%;
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+}
+
+button {
+    margin-left: 15%;
+    margin-bottom: 20px;
+}
+
+small {
+    margin-left: 15%;
+    font-weight: bold;
+}
+
+.radioButton {
+    margin-left: 100%;
 }

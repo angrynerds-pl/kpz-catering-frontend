@@ -1,60 +1,9 @@
-.container
-{
-    display:flex;
-    width: 60%;
-    height: 50px;
-    
-    margin-left: auto;
-    margin-right: auto;
-    background-color:  rgba(153, 167, 121, 0.767);
-    /*background-color:
-    justify-content: space-between;*/
-}
 
-.option
-{
-	color: black;
-	min-width: 50px;
-	height: 40px;
-	font-size: 18px;
-	padding: 10px;
-	border-right: 2px dotted #444444;
-    opacity: 0.8;
-}
-
-.option:hover
-{
-    background-color: wheat;
-    cursor: pointer;
-}
-
-.optionLast
-{
-    color: black;
-	min-width: 50px;
-	height: 40px;
-	font-size: 18px;
-	padding: 10px;
-    opacity: 0.8;
-}
-
-.optionLast:hover
-{
-    background-color: wheat;
-    cursor: pointer;
-}
 
 .menu:hover .menu__link:not(:hover){
     color: #241c69;
   }
-  
-  /* 
-  =====
-  MENU STYLES
-  =====
-  */
-  
-  /* core styles */
+ 
   
   .menu__list{
     display: flex;  
@@ -73,8 +22,6 @@
     display: block;
   }
   
-  /* skin */
-  
   .menu{
     background-color: #6c5ce7;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
@@ -89,12 +36,9 @@
     text-transform: uppercase;
   }
   
-  /* states */
   .menu__link:focus{
     outline: 2px solid #fff;
   }
-  
-  /* hover animation */
   
   .menu__link{
     position: relative;
@@ -134,12 +78,7 @@
     transition-duration: .2s;
   }
   
-  /*
-  =====
-  DEMO
-  =====
-  */
-  
+
   @media (min-width: 768px){
   
     html{
@@ -166,11 +105,20 @@
   .page{
     box-sizing: border-box;
     /*max-width: 640px;*/
-    width: 62%;  
-    padding-left: 1rem;
-    padding-right: 1rem;
-    
+    width: 74.2%;  
     order: 1;
     margin: auto;
+    font-family: 'Chelsea Market', cursive;
+
+  }
+
+  .flex-container {
+    display: flex;
+    width: auto;
+  }
+
+  .flex-container > div {   
+    font-size: 18px;
+   
   }
   

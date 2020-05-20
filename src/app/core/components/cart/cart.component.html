@@ -1,20 +1,24 @@
 <app-top-bar></app-top-bar>
 
-
-
 <div id="container">
   <h2>Twój koszyk</h2>
-  <div class="cart-item" *ngFor="let product of dishes" >
-    <p id = 'two'>{{ product.name }}
+  <ng-container *ngIf="dishes.length != 0">
+  <p class="cart-item" id = 'two'>
+  <ng-container *ngFor="let product of dishes">
+  
+    <a>{{ product.name }}
     {{ product.price  }} zł
-    <button (click)="removeProduct(product)">Usuń</button></p>
-  </div>
+    <button class="myButton" (click)="removeProduct(product)">Usuń</button></a>
+    <br>
+   </ng-container>
+  </p>
   
   <div *ngIf="sum != 0">
     <p id = 'three'>Suma: {{sum.toFixed(2)}} zł
       <a routerLink="/order">
-        <button>Zamawiam</button>
+        <button class="myButton">Zamawiam</button>
       </a>
     </p>
   </div>
+</ng-container>
 </div>
