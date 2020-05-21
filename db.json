@@ -169,6 +169,41 @@
       "orderTime": "2020-05-21T13:07:36.507Z",
       "orderDeliveredTime": "2020-05-21T13:07:36.507Z",
       "id": 10
+    },
+    {
+      "perdiodicity": 1,
+      "timePreference": "morning",
+      "dishes": [
+        {
+          "name": "Schabowy",
+          "price": 21,
+          "description": "Ziemniaki, mięso, surówka",
+          "count": null
+        },
+        {
+          "name": "Grzybowa",
+          "price": 9.99,
+          "description": "Grzyby, ziemniaki, wywar",
+          "count": null
+        }
+      ],
+      "sum": 30.990000000000002,
+      "client": {
+        "name": "jan",
+        "lastName": "chuj",
+        "email": "adasasd",
+        "phone": "123123123"
+      },
+      "address": {
+        "miasto": "a",
+        "ulica": "a",
+        "nrDomu": "1",
+        "nrMieszkania": "1",
+        "kodPocztowy": "1"
+      },
+      "orderTime": "2020-05-21T16:46:54.915Z",
+      "orderDeliveredTime": "2020-05-21T16:46:54.915Z",
+      "id": 11
     }
   ]
 }
