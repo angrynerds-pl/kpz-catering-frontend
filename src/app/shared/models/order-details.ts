@@ -8,7 +8,7 @@ export class OrderDetails {
     public sum: number;
     public orderTime: Date;
     public status: string;
-    public perdiodicity = true;
+    public perdiodicity = 1;
     public address: Address;
     public timePreference = 'morning';
     public orderDeliveredTime: Date;
