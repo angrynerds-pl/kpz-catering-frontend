@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {dishes} from '../../Models/dishes';
 import {CartService} from '../../services/cart.service';
 import { DishesListService } from '../../services/dishes-list.service';
 
@@ -11,9 +10,7 @@ import { DishesListService } from '../../services/dishes-list.service';
   styleUrls: ['./dishes-list.component.css']
 })
 export class DishesListComponent implements OnInit {
-  /*dishes = dishes;
-  items = [];
-  json;*/
+  
   title = 'todo-app';
   menu = [];
   rows = [];

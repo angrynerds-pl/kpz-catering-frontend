@@ -21,11 +21,43 @@
         </div>
 
         <div class="form-group">
-            <label>Adres</label>
-            <input  type="text" name="address" #adress="ngModel" required class="form-control"
-            [class.is-invalid]="adress.invalid && adress.touched" 
-            [(ngModel)]="userModel.address">
-            <small class="text-danger" [class.d-none]="adress.valid || adress.untouched">Adres jest wymagany</small>
+            <label>Miasto</label>
+            <input  type="text" name="city" #city="ngModel" required class="form-control"
+            [class.is-invalid]="city.invalid && city.touched" 
+            [(ngModel)]="userAddress.miasto">
+            <small class="text-danger" [class.d-none]="city.valid || city.untouched">Podaj miasto</small>
+        </div>
+
+        <div class="form-group">
+            <label>Ulica</label>
+            <input  type="text" name="street" #street="ngModel" required class="form-control"
+            [class.is-invalid]="street.invalid && street.touched" 
+            [(ngModel)]="userAddress.ulica">
+            <small class="text-danger" [class.d-none]="street.valid || street.untouched">Podaj ulice</small>
+        </div>
+
+        <div class="form-group">
+            <label>Numer domu</label>
+            <input  type="text" name="building" #building="ngModel" required class="form-control"
+            [class.is-invalid]="building.invalid && building.touched" 
+            [(ngModel)]="userAddress.nrDomu">
+            <small class="text-danger" [class.d-none]="building.valid || building.untouched">Podaj numer domu</small>
+        </div>
+
+        <div class="form-group">
+            <label>Numer mieszkania</label>
+            <input  type="text" name="flat" #flat="ngModel" required class="form-control"
+            [class.is-invalid]="flat.invalid && flat.touched" 
+            [(ngModel)]="userAddress.nrMieszkania">
+            <small class="text-danger" [class.d-none]="flat.valid || flat.untouched">Podaj numer mieszkania</small>
+        </div>
+
+        <div class="form-group">
+            <label>Kod pocztowy</label>
+            <input  type="text" name="postal" #postal="ngModel" required class="form-control"
+            [class.is-invalid]="postal.invalid && postal.touched" 
+            [(ngModel)]="userAddress.kodPocztowy">
+            <small class="text-danger" [class.d-none]="postal.valid || postal.untouched">Podaj kod pocztowy</small>
         </div>
 
         <div class="form-group">

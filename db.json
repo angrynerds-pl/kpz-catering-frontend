@@ -38,6 +38,172 @@
       "login": "a",
       "password": "a",
       "id": 5
+    },
+    {
+      "timePreference": "morning",
+      "dishes": [
+        {
+          "name": "Naleśniki",
+          "price": 9.99,
+          "description": "3 sztuki z serem, polewa, bita śmietana",
+          "count": null
+        }
+      ],
+      "sum": 9.99,
+      "client": {
+        "name": "a",
+        "lastName": "a",
+        "email": "sad",
+        "phone": "123123123"
+      },
+      "address": {
+        "ulica": "a",
+        "nrDomu": "1",
+        "nrMieszkania": "1",
+        "kodPocztowy": "25",
+        "miasto": "a"
+      },
+      "id": 6
+    },
+    {
+      "timePreference": "evening",
+      "perdiodicity": true,
+      "dishes": [
+        {
+          "name": "Grzybowa",
+          "price": 9.99,
+          "description": "Grzyby, ziemniaki, wywar",
+          "count": null
+        }
+      ],
+      "sum": 9.99,
+      "client": {
+        "name": "a",
+        "lastName": "a",
+        "email": "aad",
+        "phone": "123123123"
+      },
+      "address": {
+        "ulica": "a",
+        "nrDomu": "1",
+        "nrMieszkania": "1",
+        "kodPocztowy": "1",
+        "miasto": "a"
+      },
+      "id": 7
+    },
+    {
+      "perdiodicity": true,
+      "timePreference": "morning",
+      "dishes": [
+        {
+          "name": "Grzybowa",
+          "price": 9.99,
+          "description": "Grzyby, ziemniaki, wywar",
+          "count": null
+        }
+      ],
+      "sum": 9.99,
+      "client": {
+        "name": "a",
+        "lastName": "a",
+        "email": "a",
+        "phone": "123123123"
+      },
+      "address": {
+        "miasto": "a",
+        "ulica": "a",
+        "nrDomu": "1",
+        "nrMieszkania": "1",
+        "kodPocztowy": "1"
+      },
+      "id": 8
+    },
+    {
+      "perdiodicity": true,
+      "timePreference": "morning",
+      "dishes": [
+        {
+          "name": "Grzybowa",
+          "price": 9.99,
+          "description": "Grzyby, ziemniaki, wywar",
+          "count": null
+        }
+      ],
+      "sum": 9.99,
+      "client": {
+        "name": "a",
+        "lastName": "a",
+        "email": "a",
+        "phone": "123123123"
+      },
+      "address": {
+        "miasto": "a",
+        "ulica": "a",
+        "nrDomu": 1,
+        "nrMieszkania": 1,
+        "kodPocztowy": "1"
+      },
+      "orderTime": "2020-05-21T12:43:18.475Z",
+      "orderDeliveredTime": "2020-05-21T12:43:18.475Z",
+      "id": 9
+    },
+    {
+      "perdiodicity": true,
+      "timePreference": "morning",
+      "dishes": [],
+      "sum": 0,
+      "client": {
+        "name": "a",
+        "lastName": "a",
+        "email": "a",
+        "phone": "123123123"
+      },
+      "address": {
+        "miasto": "a",
+        "ulica": "a",
+        "nrDomu": "1",
+        "nrMieszkania": "2",
+        "kodPocztowy": "1"
+      },
+      "orderTime": "2020-05-21T13:07:36.507Z",
+      "orderDeliveredTime": "2020-05-21T13:07:36.507Z",
+      "id": 10
+    },
+    {
+      "perdiodicity": 1,
+      "timePreference": "morning",
+      "dishes": [
+        {
+          "name": "Schabowy",
+          "price": 21,
+          "description": "Ziemniaki, mięso, surówka",
+          "count": null
+        },
+        {
+          "name": "Grzybowa",
+          "price": 9.99,
+          "description": "Grzyby, ziemniaki, wywar",
+          "count": null
+        }
+      ],
+      "sum": 30.990000000000002,
+      "client": {
+        "name": "jan",
+        "lastName": "chuj",
+        "email": "adasasd",
+        "phone": "123123123"
+      },
+      "address": {
+        "miasto": "a",
+        "ulica": "a",
+        "nrDomu": "1",
+        "nrMieszkania": "1",
+        "kodPocztowy": "1"
+      },
+      "orderTime": "2020-05-21T16:46:54.915Z",
+      "orderDeliveredTime": "2020-05-21T16:46:54.915Z",
+      "id": 11
     }
   ]
 }

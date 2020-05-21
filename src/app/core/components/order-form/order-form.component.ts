@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientInfo } from '../../Models/ClientInfo';
+import { ClientInfo } from '../../../shared/models/ClientInfo';
 import { OrderService } from '../../services/order.service';
 import { CartService } from '../../services/cart.service';
-import { OrderDetails } from '../../Models/order-details';
+import { OrderDetails } from '../../../shared/models/order-details';
 import { Router } from '@angular/router';
+import {Address} from 'src/app/shared/models/address';
 
 
 @Component({
@@ -14,6 +15,7 @@ import { Router } from '@angular/router';
 export class OrderFormComponent implements OnInit {
 
   userModel = new ClientInfo();
+  userAddress = new Address();
   orderDetails: OrderDetails = new OrderDetails();
   constructor(public orderService: OrderService, public cartService: CartService, private router: Router) { }
   
@@ -25,6 +27,9 @@ export class OrderFormComponent implements OnInit {
     this.cartService.getDishes().subscribe(dishes => this.orderDetails.dishes = dishes);
     this.cartService.getSum().subscribe(sum => this.orderDetails.sum = sum);
     this.orderDetails.client = this.userModel;
+    this.orderDetails.address = this.userAddress;
+    this.orderDetails.orderTime = new Date();
+    this.orderDetails.orderDeliveredTime = new Date();
   }
 
   onSubmit()
