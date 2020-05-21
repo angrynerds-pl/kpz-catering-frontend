@@ -7,31 +7,34 @@
 
 <h2>Zamówienia:</h2>
 <ng-container *ngFor="let order of orders" >
-  <div *ngIf="order.status=='Złożone'" id="one">
-    <h3>
-
+  <div *ngIf="order.status=='Złożone'" class="zam" id="one">
+    
+    <p>
         Data zamowienia: {{order.orderTime}} <br>
         Suma: {{order.sum }}  <br>
 
         Status: {{order.status}} <br>
         Imię klienta: {{order.client.name}} <br>
         Nazwisko klienta: {{order.client.lastName}}
-    </h3>
+     <br>
     <button (click)="confirm(order)" >
         Zatwierdź
       </button>
+    </p>
     </div></ng-container>
 
     <ng-container *ngFor="let order of orders" >
-      <div *ngIf="order.status!='Złożone'" id="one">
-        <h3>
+      <div *ngIf="order.status!='Złożone'" class="zam" id="one">
+        <p >
             Suma: {{order.sum }} PLN <br>
             Status: {{order.status}} <br>
             Imię klienta: {{order.client.name}} <br>
             Nazwisko klienta: {{order.client.lastName}}
-        </h3>
+        
         <button (click)="confirm(order)" >
             Zatwierdź
           </button>
+          <br>
+        </p>
         </div></ng-container>
       </div>
