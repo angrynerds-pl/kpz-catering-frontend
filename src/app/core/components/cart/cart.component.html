@@ -6,9 +6,9 @@
   <p class="cart-item" id = 'two'>
   <ng-container *ngFor="let product of dishes">
   
-    <a>{{ product.name }}
+    {{ product.name }}
     {{ product.price  }} zł
-    <button class="myButton" (click)="removeProduct(this.product)">Usuń</button></a>
+    <button class="myButton" (click)="removeProduct(this.product)">Usuń</button>
     <br>
    </ng-container>
   </p>

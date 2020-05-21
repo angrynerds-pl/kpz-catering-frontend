@@ -105,7 +105,6 @@
   
   .page{
     box-sizing: border-box;
-    /*max-width: 640px;*/
     width: 74.2%;  
     order: 1;
     margin: auto;
@@ -126,22 +125,6 @@
     color: white;
     text-align: center;
   }
-
-  /*nav ul {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  nav li {
-    flex: 1 1 0;
-  }
-
-  nav {
-  
-    flex: 1 1 0;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }*/
 
   
   

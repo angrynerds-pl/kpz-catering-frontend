@@ -79,8 +79,9 @@ h3 {
   margin-top: 10px;
   width: 250px;
   line-height: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .myButton {
