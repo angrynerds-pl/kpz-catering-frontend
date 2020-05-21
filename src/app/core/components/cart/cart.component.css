@@ -10,6 +10,7 @@
 p{
    /*display:inline-block;*/
     width:50%;
+    min-width: 240px;
     padding:1em;
     background:hsla(67, 95%, 95%, 1);
     text-align: center;

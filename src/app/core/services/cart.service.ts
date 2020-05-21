@@ -22,13 +22,14 @@ export class CartService {
     sum += product.price;
     this.sumObs.next(sum);
   }
-  removeFromCart(product)
-  {
-    const list = this.dishesListObs.getValue().filter(e => e !== product);
+  removeFromCart(product) {
+    //const list = this.dishesListObs.getValue().filter(e => e !== product);
+    const n = this.dishesListObs.getValue().findIndex(e => e === product);
+    this.dishesListObs.getValue().splice(n, 1);
     //let list = this.dishesListObs.getValue();
     //const index = list.findIndex(product);
     //list = list.splice(index, 1);
-    this.dishesListObs.next(list);
+    //this.dishesListObs.next(list);
     let sum = this.sumObs.getValue();
     sum -= product.price;
     this.sumObs.next(sum);
