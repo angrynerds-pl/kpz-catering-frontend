@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../../services/order.service';
 import { Observable, BehaviorSubject } from 'rxjs';
-import {FullOrderDetails} from '../../model/fullOrderDetails';
+import {OrderDetails} from 'src/app/shared/models/order-details';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
-import { User } from 'src/app/admin/model/User';
+import { User } from 'src/app/shared/models/User';
 @Component({
   selector: 'app-admin-page',
   templateUrl: './admin-page.component.html',
@@ -12,7 +12,7 @@ import { User } from 'src/app/admin/model/User';
 })
 export class AdminPageComponent implements OnInit {
   currentUser: User;
-  orders: Array<FullOrderDetails> ;
+  orders: Array<OrderDetails> = [] ;
   constructor(private orderService: OrderService, private router: Router, private authenticationService: LoginService) 
   {
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);

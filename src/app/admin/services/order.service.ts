@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
-import {FullOrderDetails} from '../model/fullOrderDetails';
+import {OrderDetails} from 'src/app/shared/models/order-details';
 import {HubConnection, HubConnectionBuilder, LogLevel} from '@aspnet/signalr';
 
 @Injectable({
@@ -10,10 +10,11 @@ import {HubConnection, HubConnectionBuilder, LogLevel} from '@aspnet/signalr';
 export class OrderService {
   
   private hubConnection: HubConnection;
-  order: Array<FullOrderDetails>;
-  singalRecived = new EventEmitter<FullOrderDetails>();
+  order: Array<OrderDetails>;
+  singalRecived = new EventEmitter<OrderDetails>();
 
   url = 'https://cateringbackend.azurewebsites.net/Order/ordersList';
+  url2 = 'https://cateringbackend.azurewebsites.net/ordersHub';
 
   constructor(private http: HttpClient) {
     this.createConnection();
@@ -21,20 +22,20 @@ export class OrderService {
     this.startConnection();
    }
 
-  getOrders(): Observable<Array<FullOrderDetails>>
+  getOrders(): Observable<Array<OrderDetails>>
   {
-    return this.http.get<Array<FullOrderDetails>>(this.url);
+    return this.http.get<Array<OrderDetails>>(this.url);
   } 
 
   createConnection() {
     this.hubConnection = new HubConnectionBuilder()
-      .withUrl(this.url)
+      .withUrl(this.url2)
       .configureLogging(LogLevel.Debug)
       .build();
   }
 
   register(): void {
-    this.hubConnection.on('InformAdmin', (order: FullOrderDetails) => {
+    this.hubConnection.on('InformAdmin', (order: OrderDetails) => {
       console.log(order);
       this.singalRecived.emit(order);
     });
@@ -48,7 +49,6 @@ export class OrderService {
       })
       .catch(err => {
         console.log('Opps!');
-        setTimeout(function() { this.startConnection(); }, 5000);
       });
   }
   sendOrders(order)
