@@ -3,7 +3,7 @@
   width: 74.2%;
 	margin-left: auto;
   margin-right: auto;
-  height: 1000px;
+  min-height: 1000px;
   background-image: img('assets/img/table_2.jpg');
 }
 

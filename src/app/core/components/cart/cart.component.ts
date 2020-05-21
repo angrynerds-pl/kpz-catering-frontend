@@ -15,16 +15,13 @@ export class CartComponent implements OnInit {
     this.getDishes();
     this.getSum();
   }
-  getDishes()
-  {
+  getDishes() {
     this.cartService.getDishes().subscribe(dishes => this.dishes = dishes);
   }
-  getSum()
-  {
+  getSum() {
     this.cartService.getSum().subscribe(sum => this.sum = sum);
   }
-  removeProduct(product)
-  {
+  removeProduct(product) {
     this.cartService.removeFromCart(product);
   }
 
