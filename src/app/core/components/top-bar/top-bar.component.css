@@ -7,6 +7,7 @@
   
   .menu__list{
     display: flex;  
+    flex-direction: row;
     text-align: center;
     padding-left: 0;
     margin-top: 0;
@@ -104,21 +105,26 @@
   
   .page{
     box-sizing: border-box;
-    /*max-width: 640px;*/
     width: 74.2%;  
     order: 1;
     margin: auto;
     font-family: 'Chelsea Market', cursive;
-
+    display: flex;
+    justify-content: center;
   }
 
   .flex-container {
     display: flex;
-    width: auto;
+    flex-direction: row;
+    background-color: #6c5ce7;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .flex-container > div {
+    color: white;
+    text-align: center;
   }
 
-  .flex-container > div {   
-    font-size: 18px;
-   
-  }
+  
   
