@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { OrderService } from '../../services/order.service';
 import { Observable, BehaviorSubject } from 'rxjs';
 import {OrderDetails} from 'src/app/shared/models/order-details';
@@ -16,22 +16,18 @@ export class AdminPageComponent implements OnInit {
   constructor(private orderService: OrderService, private router: Router, private authenticationService: LoginService) 
   {
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this.orderService.createConnection();
+    this.orderService.register();
+    this.orderService.startConnection();
   }
 
   ngOnInit(): void {
     this.getOrders();
-    this.getNewOrders();
   }
-
+  
   getOrders()
   {
     this.orderService.getOrders().subscribe(orders => this.orders =  orders);
-    this.orders.sort((a, b) => new Date(b.orderTime).getTime() - new Date(a.orderTime).getTime());
-  }
-  getNewOrders()
-  {
-    this.orderService.singalRecived.subscribe(signal => this.orders.push(signal));
-    this.orders.sort((a, b) => new Date(b.orderTime).getTime() - new Date(a.orderTime).getTime());
   }
 
   confirm(order)
@@ -39,6 +35,7 @@ export class AdminPageComponent implements OnInit {
     order.status = 'zatwierdzono';
     this.orderService.sendOrders(order);
   }
+
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/admin']);
