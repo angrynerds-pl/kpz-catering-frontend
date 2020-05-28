@@ -22,7 +22,7 @@ const appRoutes: Routes = [
   { path: 'admin', component: LoginComponent},
   { path: 'admin/page', component: AdminPageComponent, canActivate: [AuthAdminGuard]},
   { path: 'clientLogin', component: ClientLoginPageComponent},
-  { path: 'account', component: AccountComponent, canActivate: [AuthAdminGuard]},
+  { path: 'account', component: AccountComponent},
   { path: 'signin', component: SignInComponent},
   { path: 'signup', component: SignUpComponent}
   
