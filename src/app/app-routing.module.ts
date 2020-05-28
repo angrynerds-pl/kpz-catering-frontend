@@ -10,6 +10,9 @@ import { AuthAdminGuard } from './shared/auth/authAdmin.guard';
 import { AuthClientGuard } from './shared/auth/authClient.guard';
 import {ClientLoginPageComponent} from 'src/app/user/components/client-login-page/client-login-page.component'
 import {AccountComponent} from 'src/app/user/components/account/account.component'
+import { SignUpComponent } from './core/components/sign-up/sign-up.component';
+import { SignInComponent } from './core/components/sign-in/sign-in.component';
+import { MainPageComponent } from './core/components/main-page/main-page.component';
 
 
 const appRoutes: Routes = [

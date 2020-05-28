@@ -1,9 +1,10 @@
-.container-fluid {
-    background-color: cadetblue;
+/*.container-fluid {
     width: 74.2%;
     margin-left: auto;
     margin-right: auto;
-}
+    background-image: url('assets/img/zamowienie.jpg');
+    background-size: 100% 100%;
+}*/
 
 h1 {
     text-align: center;
@@ -11,27 +12,25 @@ h1 {
     font-family: 'Chelsea Market', cursive;
 }
 
-label {
-    font-size: 20px;
-}
 
 input {
    
 }
 
 label{
-    margin-left: 15%;
+    margin-left: 25%;
     font-family: 'Handlee', cursive;
     font-weight: bold;
+    font-size: 20px;
 }
 
 button {
-    margin-left: 15%;
+    margin-left: 25%;
     margin-bottom: 20px;
 }
 
 small {
-    margin-left: 15%;
+    margin-left: 25%;
     font-weight: bold;
 }
 
@@ -43,7 +42,8 @@ small {
 
 
 #box {
-    width: 70%;
+    width: 50%;
+    min-width: 300px;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Handlee', cursive;

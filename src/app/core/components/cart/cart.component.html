@@ -1,35 +1,34 @@
 
 
-<div id="container" >
+<div id="container" style="background-image: url('assets/img/eat.jpg'); background-size: 100% 100%;" >
   <section class="section-intro">
   <app-top-bar></app-top-bar>
 </section>
   <h2>Twój koszyk</h2>
-  <ng-container *ngIf="dishes.length != 0">
-  <!--<div class="cart-item" id = 'two' >-->
-  <ng-container *ngFor="let product of dishes">
-    <p id = 'two' style="height: 50px; margin-top: 0; margin-bottom: 10px;">
-      {{ product.name }}
-      {{ product.price  }} zł
-     </p>
-      <p id="two" style="background-image: url('assets/img/{{product.name}}.jpg'); background-size: 100% 100%; margin-bottom: 0; margin-top: 10px;"></p>
+  <div class="flex-container">
+    <ng-container *ngIf="dishes.length != 0">
+    <div *ngFor="let product of dishes" style="align-items: center;">
+      <h3 id = 'two'>
+        {{ product.name }}
+        {{ product.price  }} zł
+      </h3>
+        <p id="two" style="background-image: url('assets/img/{{product.name}}.jpg'); background-size: 100% 100%; margin-bottom: 0; margin-top: 0px;"></p>
 
-      <button class="myButton" style="text-align: center; align-items: center;" (click)="removeProduct(this.product)">Usuń</button>
-<br>
-   </ng-container>
+        <button class="myButton" style="text-align: center; align-items: center;" (click)="removeProduct(this.product)">Usuń</button>
+      <br>
+    </div>
+  </ng-container></div>
  <!-- </div> -->
   
   <div *ngIf="sum != 0" style="width: 70%; margin-left: auto; margin-right: auto;">
-    <p id = 'three' style="height: 80px; text-align: center;">Suma: {{sum.toFixed(2)}} zł
+    <p id = 'three' style="height: 100px; text-align: center;">Suma: {{sum.toFixed(2)}} zł
       <a routerLink="/order">
         <button class="myButton">Zamawiam</button>
       </a>
     </p>
   </div>
-</ng-container>
-<!--<div class="container text-center">
-<button type="button" (click)="minus()"><i class="fa-minus"></i></button>
-<input type="text" [value]="quantity">
-<button type="button" (click)="plus()"><i class="fa fa-plus"></i></button></div>-->
+
+
+
 </div>
 
