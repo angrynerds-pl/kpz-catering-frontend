@@ -15,15 +15,17 @@ import { SignInComponent } from './core/components/sign-in/sign-in.component';
 import { SignUpComponent } from './core/components/sign-up/sign-up.component';
 
 const appRoutes: Routes = [
+  { path: '', component: MainPageComponent},
   { path: 'menu', component: DishesListComponent },
   { path: 'cart', component: CartComponent },
   { path: 'order', component: OrderFormComponent},
   { path: 'admin', component: LoginComponent},
   { path: 'admin/page', component: AdminPageComponent, canActivate: [AuthAdminGuard]},
   { path: 'clientLogin', component: ClientLoginPageComponent},
-  { path: 'account', component: AccountComponent, canActivate: [AuthAdminGuard]},
+  { path: 'account', component: AccountComponent},
   { path: 'signin', component: SignInComponent},
   { path: 'signup', component: SignUpComponent}
+  
 ];
 
 @NgModule({
