@@ -1,24 +1,33 @@
-<app-top-bar></app-top-bar>
 
-<div id="container">
+
+<div id="container" >
+  <section class="section-intro">
+  <app-top-bar></app-top-bar>
+</section>
   <h2>Twój koszyk</h2>
   <ng-container *ngIf="dishes.length != 0">
-  <p class="cart-item" id = 'two'>
+  <div class="cart-item" id = 'two' >
   <ng-container *ngFor="let product of dishes">
-  
-    {{ product.name }}
-    {{ product.price  }} zł
-    <button class="myButton" (click)="removeProduct(this.product)">Usuń</button>
+    <p id="two" style="background-image: url('assets/img/{{product.name}}.jpg'); background-size: 100% 100%; margin-bottom: 0; margin-top: 10px;"></p>
+    <p id = 'two' style="height: 50px; margin-top: 0; margin-bottom: 10px;">
+      {{ product.name }}
+      {{ product.price  }} zł
+      <button class="myButton" (click)="removeProduct(this.product)">Usuń</button></p>
     <br>
    </ng-container>
-  </p>
+  </div>
   
-  <div *ngIf="sum != 0">
-    <p id = 'three'>Suma: {{sum.toFixed(2)}} zł
+  <div *ngIf="sum != 0" style="width: 70%; margin-left: auto; margin-right: auto;">
+    <p id = 'three' style="height: 80px; text-align: center;">Suma: {{sum.toFixed(2)}} zł
       <a routerLink="/order">
         <button class="myButton">Zamawiam</button>
       </a>
     </p>
   </div>
 </ng-container>
+<!--<div class="container text-center">
+<button type="button" (click)="minus()"><i class="fa-minus"></i></button>
+<input type="text" [value]="quantity">
+<button type="button" (click)="plus()"><i class="fa fa-plus"></i></button></div>-->
 </div>
+

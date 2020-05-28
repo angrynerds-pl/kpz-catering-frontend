@@ -1,15 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
+/*html, body {
   height: auto;
-  overflow: visible; /*hidden;*/
+  overflow: visible;
   background-image: url('assets/img/bananas.png');
+  //background-image: url('assets/img/petr-sevcovic-qE1jxYXiwOA-unsplash.jpg');
 }
 
-/*body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}*/
 
 router-outlet + * {
   display: block;
@@ -36,4 +33,42 @@ button:focus, button:active:focus, button.active:focus {
 
 a:focus, a:active:focus, a.active:focus {
   outline: none !important;
+}*/
+
+.flex-logo {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin: 30px 20px;
+  justify-content: center;
 }
+
+.opening-time,
+.contact-adress {
+    flex: 1;
+    margin: 30px 20px;
+    font-size: 1.2em;
+}
+
+.opening-time p span,
+.contact-adress p span {
+    font-size: 15px;
+    text-align: center;
+}
+
+.opening-time p span,
+.contact-adress p span {
+    display: block;
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.row-flex h3 {
+  font-size: 25px;
+  text-align: center;
+}
+

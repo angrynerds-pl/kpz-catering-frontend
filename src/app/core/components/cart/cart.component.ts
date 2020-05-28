@@ -25,6 +25,20 @@ export class CartComponent implements OnInit {
     this.cartService.removeFromCart(product);
   }
 
+  countProduct(product) {
+    return this.cartService.countProduct(product);
+  }
 
+  quantity: number = 1;
+
+  plus() {
+    if(this.quantity != 5)
+      this.quantity++;
+  }
+
+  minus() {
+    if(this.quantity != 0)
+      this.quantity--;
+  }
 
 }

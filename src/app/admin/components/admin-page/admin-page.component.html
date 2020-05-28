@@ -4,7 +4,6 @@
 </div>
 
 
-
 <h2>Zamówienia:</h2>
 <ng-container *ngFor="let order of orders" >
   <div *ngIf="order.status=='Złożone'" class="zam" id="one">
@@ -30,7 +29,7 @@
             Status: {{order.status}} <br>
             Imię klienta: {{order.client.name}} <br>
             Nazwisko klienta: {{order.client.lastName}}
-        
+         <br>
         <button (click)="confirm(order)" >
             Zatwierdź
           </button>

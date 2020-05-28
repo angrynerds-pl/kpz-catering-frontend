@@ -49,3 +49,11 @@ small {
     font-family: 'Handlee', cursive;
     font-weight: bold;
 }
+
+.section-intro {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
