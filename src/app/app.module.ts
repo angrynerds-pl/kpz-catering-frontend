@@ -7,9 +7,10 @@ import { CoreModule } from './core/core.module';
 import { FormsModule } from '@angular/forms';
 
 import { AdminModule } from './admin/admin.module';
-import { AuthGuard } from './admin/auth/auth.guard';
-import {JwtInterceptor} from './admin/auth/jwt.interceptor';
-import {ErrorInterceptor} from './admin/auth/error.interceptor';
+
+import {JwtInterceptor} from 'src/app/shared/auth/jwt.interceptor';
+import {ErrorInterceptor} from 'src/app/shared/auth/error.interceptor';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {ErrorInterceptor} from './admin/auth/error.interceptor';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AdminModule
+    AdminModule,
+    UserModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
