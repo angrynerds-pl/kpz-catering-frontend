@@ -13,7 +13,6 @@ import {AccountComponent} from 'src/app/user/components/account/account.componen
 
 
 const appRoutes: Routes = [
-  { path: '', component: MainPageComponent},
   { path: 'menu', component: DishesListComponent },
   { path: 'cart', component: CartComponent },
   { path: 'order', component: OrderFormComponent},
@@ -21,8 +20,7 @@ const appRoutes: Routes = [
   { path: 'admin/page', component: AdminPageComponent, canActivate: [AuthAdminGuard]},
   { path: 'clientLogin', component: ClientLoginPageComponent},
   { path: 'account', component: AccountComponent, canActivate: [AuthAdminGuard]},
-  { path: 'signin', component: SignInComponent},
-  { path: 'signup', component: SignUpComponent},
+  
   
 ];
 
