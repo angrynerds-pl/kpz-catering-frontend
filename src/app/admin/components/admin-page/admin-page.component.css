@@ -74,6 +74,7 @@
 
   .container {
     display: flex;
+    background-color: grey;
   }
 
   .image {
