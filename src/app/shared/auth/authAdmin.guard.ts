@@ -5,7 +5,7 @@ import {LoginService} from 'src/app/admin/services/login.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class AuthAdminGuard implements CanActivate {
 
   constructor(
     private router: Router,
