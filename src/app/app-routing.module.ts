@@ -16,7 +16,6 @@ import { MainPageComponent } from './core/components/main-page/main-page.compone
 
 
 const appRoutes: Routes = [
-  { path: '', component: MainPageComponent},
   { path: 'menu', component: DishesListComponent },
   { path: 'cart', component: CartComponent },
   { path: 'order', component: OrderFormComponent},
@@ -25,8 +24,7 @@ const appRoutes: Routes = [
   { path: 'clientLogin', component: ClientLoginPageComponent},
   { path: 'account', component: AccountComponent, canActivate: [AuthAdminGuard]},
   { path: 'signin', component: SignInComponent},
-  { path: 'signup', component: SignUpComponent},
-  
+  { path: 'signup', component: SignUpComponent}
 ];
 
 @NgModule({
