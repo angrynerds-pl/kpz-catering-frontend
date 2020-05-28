@@ -1,8 +1,9 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, throwError, BehaviorSubject } from 'rxjs';
 import {OrderDetails} from 'src/app/shared/models/order-details';
 import {HubConnection, HubConnectionBuilder, LogLevel} from '@aspnet/signalr';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,21 +11,25 @@ import {HubConnection, HubConnectionBuilder, LogLevel} from '@aspnet/signalr';
 export class OrderService {
   
   private hubConnection: HubConnection;
-  order: Array<OrderDetails>;
-  singalRecived = new EventEmitter<OrderDetails>();
+  orders: Array<OrderDetails> = [];
+  orderSub = new BehaviorSubject<Array<OrderDetails>>(this.orders);
 
   url = 'https://cateringbackend.azurewebsites.net/Order/ordersList';
-  url2 = 'https://cateringbackend.azurewebsites.net/ordersHub';
+  url2 = 'https://cateringbackend.azurewebsites.net/orderHub';
+  url3 = 'https://cateringbackend.azurewebsites.net/Order/changeStatus';
 
   constructor(private http: HttpClient) {
-    this.createConnection();
-    this.register();
-    this.startConnection();
+    this.orderSub.next(this.orders);
    }
 
   getOrders(): Observable<Array<OrderDetails>>
   {
-    return this.http.get<Array<OrderDetails>>(this.url);
+    this.http.get<Array<OrderDetails>>(this.url).subscribe(orders => this.orders =  orders);
+    this.orders.sort((a, b) => new Date(b.orderTime).getTime() - new Date(a.orderTime).getTime());
+    this.orderSub.next(this.orders);
+    console.log('getOrders called');
+    return this.orderSub.asObservable();
+    
   } 
 
   createConnection() {
@@ -35,9 +40,11 @@ export class OrderService {
   }
 
   register(): void {
-    this.hubConnection.on('InformAdmin', (order: OrderDetails) => {
+    this.hubConnection.on('The new order was created', (order: OrderDetails) => {
       console.log(order);
-      this.singalRecived.emit(order);
+      this.orders.push(order);
+      this.orderSub.next(this.orders);
+      this.orders.sort((a, b) => new Date(b.orderTime).getTime() - new Date(a.orderTime).getTime());
     });
   }
 
@@ -53,6 +60,15 @@ export class OrderService {
   }
   sendOrders(order)
   {
-    this.hubConnection.invoke('ConfirmedOrders', order).catch(err => console.error(err));
+    this.http.post<any>(this.url3, order).pipe(
+      catchError((err) => {
+        console.log('error caught in service')
+        console.error(err);
+
+        //Handle the error here
+
+        return throwError(err);    //Rethrow it back to component
+      })
+    )
   }
 }
