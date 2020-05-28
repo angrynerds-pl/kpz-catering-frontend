@@ -13,9 +13,11 @@ import {AccountComponent} from 'src/app/user/components/account/account.componen
 import { SignUpComponent } from './core/components/sign-up/sign-up.component';
 import { SignInComponent } from './core/components/sign-in/sign-in.component';
 import { MainPageComponent } from './core/components/main-page/main-page.component';
+import { ClientRegistrationComponent } from './user/components/client-registration/client-registration.component';
 
 
 const appRoutes: Routes = [
+  {path: '', component: MainPageComponent},
   { path: 'menu', component: DishesListComponent },
   { path: 'cart', component: CartComponent },
   { path: 'order', component: OrderFormComponent},
@@ -23,8 +25,7 @@ const appRoutes: Routes = [
   { path: 'admin/page', component: AdminPageComponent, canActivate: [AuthAdminGuard]},
   { path: 'clientLogin', component: ClientLoginPageComponent},
   { path: 'account', component: AccountComponent, canActivate: [AuthAdminGuard]},
-  { path: 'signin', component: SignInComponent},
-  { path: 'signup', component: SignUpComponent}
+  { path: 'register', component: ClientRegistrationComponent}
 ];
 
 @NgModule({
