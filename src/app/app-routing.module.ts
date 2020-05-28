@@ -17,6 +17,7 @@ import { ClientRegistrationComponent } from './user/components/client-registrati
 
 
 const appRoutes: Routes = [
+
   {path: '', component: MainPageComponent},
   { path: 'menu', component: DishesListComponent },
   { path: 'cart', component: CartComponent },
