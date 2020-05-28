@@ -10,7 +10,9 @@ import { AuthAdminGuard } from './shared/auth/authAdmin.guard';
 import { AuthClientGuard } from './shared/auth/authClient.guard';
 import {ClientLoginPageComponent} from 'src/app/user/components/client-login-page/client-login-page.component'
 import {AccountComponent} from 'src/app/user/components/account/account.component'
-
+import { MainPageComponent } from './core/components/main-page/main-page.component';
+import { SignInComponent } from './core/components/sign-in/sign-in.component';
+import { SignUpComponent } from './core/components/sign-up/sign-up.component';
 
 const appRoutes: Routes = [
   { path: 'menu', component: DishesListComponent },
@@ -20,8 +22,8 @@ const appRoutes: Routes = [
   { path: 'admin/page', component: AdminPageComponent, canActivate: [AuthAdminGuard]},
   { path: 'clientLogin', component: ClientLoginPageComponent},
   { path: 'account', component: AccountComponent, canActivate: [AuthAdminGuard]},
-  
-  
+  { path: 'signin', component: SignInComponent},
+  { path: 'signup', component: SignUpComponent}
 ];
 
 @NgModule({
