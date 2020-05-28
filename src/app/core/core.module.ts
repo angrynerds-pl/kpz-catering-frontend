@@ -16,13 +16,20 @@ import { DishesListComponent } from './components/dishes-list/dishes-list.compon
 import { CartComponent } from './components/cart/cart.component';
 
 import { OrderFormComponent } from './components/order-form/order-form.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+
 
 @NgModule({
   declarations: [
     TopBarComponent,
     DishesListComponent,
     CartComponent,
-    OrderFormComponent
+    OrderFormComponent,
+    MainPageComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     CommonModule,
