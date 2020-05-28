@@ -24,3 +24,14 @@ div {
 #container {
     display: flex;
 }
+
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px black;
+    width: 97px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 25%;
+    max-width: 25%;
+  }
