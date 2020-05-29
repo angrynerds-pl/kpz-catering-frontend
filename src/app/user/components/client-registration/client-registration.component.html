@@ -13,7 +13,7 @@ background-size: 100% 100%;">
             <input  type="text" id="box" name="userLogin" #userLogin="ngModel" required class="form-control" 
             [class.is-invalid]="userLogin.invalid && userLogin.touched"
             [(ngModel)]="user.username">
-            <small class="text-danger" [class.d-none]="userLogin.valid || userLogin.untouched">Nazwisko jest wymagane</small>
+            <small class="text-danger" [class.d-none]="userLogin.valid || userLogin.untouched">Login jest wymagany</small>
         </div>
 
         <div class="form-group">
@@ -21,7 +21,7 @@ background-size: 100% 100%;">
             <input  type="text" id="box" name="userPassword" #userPassword="ngModel" required class="form-control" 
             [class.is-invalid]="userPassword.invalid && userPassword.touched"
             [(ngModel)]="user.password">
-            <small class="text-danger" [class.d-none]="userPassword.valid || userPassword.untouched">Nazwisko jest wymagane</small>
+            <small class="text-danger" [class.d-none]="userPassword.valid || userPassword.untouched">Hasło jest wymagane</small>
         </div>
         
         <div class="form-group" >
